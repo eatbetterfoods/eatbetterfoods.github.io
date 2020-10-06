@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="webform.css" media="all" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <img src="Logo1.png" alt="logo" width="25%" />
+      <h1>Busy Making Better Foods for You</h1>
+      <span class="inline"><p>Want to know more? Leave us a message!</p></span>
+    </header>
+
+    <div class="container">
+      <form
+        action="https://formspree.io/xknpnrrb"
+        method="POST"
+        class="form"
+        id="my-form"
+      >
+        <div class="form-group">
+          <label for="name" class="form-label">Your Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Full Name"
+            tabindex="1"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Your Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            tabindex="2"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            name="subject"
+            placeholder="Hello There!"
+            tabindex="3"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            rows="5"
+            cols="50"
+            id="message"
+            name="message"
+            placeholder="Enter Message..."
+            tabindex="4"
+          ></textarea>
+        </div>
+        <div>
+          <button class="button"><span>Send Message </span></button>
+        </div>
+
+        <div id="status"></div>
+      </form>
+    </div>
+    <footer>
+      <div class="footer">
+        <p>&copy; EAT BETTER Foods 2020</p>
+      </div>
+    </footer>
+  </body>
+</html>

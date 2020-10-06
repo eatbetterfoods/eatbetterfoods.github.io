@@ -1,0 +1,167 @@
+:root {
+  --font-color: #555;
+  --font-hover-color: #475a57;
+}
+
+@font-face {
+  font-family: EBFCustomFont;
+  src: url("fonts/Gotham-Light.otf") format("opentype");
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: EBFCustomFont;
+  background-color: #fff;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 200px;
+}
+
+.main-header {
+  margin-right: 5%;
+  margin-bottom: 0.5%;
+  color: #475a57;
+}
+
+p {
+  text-align: center;
+}
+
+.inline {
+  font-size: 105%;
+}
+
+.container {
+  width: 500px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  padding: 2em;
+  background-color: #fff;
+}
+.form-group {
+  margin-bottom: 1.5em;
+  transition: all 0.3s;
+}
+.form-label {
+  font-size: 0.75em;
+  color: var(--font-color);
+  display: block;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translateX(-50px);
+}
+.form-control {
+  box-shadow: none;
+  border-radius: 0;
+  border-color: #ccc;
+  border-style: none none solid none;
+  width: 100%;
+  font-size: 1.25em;
+  transition: all 0.6s;
+}
+.form-control::placeholder {
+  color: #aaa;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--font-hover-color);
+  outline: none;
+}
+.form-group:focus-within {
+  transform: scale(1.1, 1.1);
+}
+
+.form-control:invalid:focus {
+  border-color: #475a57;
+}
+.form-control:valid:focus {
+  border-color: #475a57;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #475a57;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px;
+  width: 170px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  background-color: #475a57;
+  color: white;
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #475a57;
+  color: #fff;
+  font-size: 90%;
+}
